@@ -1,0 +1,344 @@
+{
+  "packs": [
+    {
+      "id": "ai_visibility_audit",
+      "name": "AI Visibility Audit",
+      "description": "Diagnose AI visibility, citations, brand mentions, and AIO click-loss risk across key pages.",
+      "roles": ["pinchy", "coral", "current"],
+      "intents": ["ai_visibility", "ai_selection", "fan_out"],
+      "keywords": ["ai visibility", "brand mentions", "citations", "ai overviews", "ai answers", "selection rate"],
+      "primary_skill": "seo",
+      "supporting_skills": ["dejan-ai-reverse-engineering", "marketing"],
+      "memory_focus": ["ai_visibility", "brand_mentions", "citations", "aio_click_loss", "ai_reverse_engineering", "selection_rate", "grounding"],
+      "checklist": [
+        "Establish the baseline across rankings, clicks, citations, mentions, and branded demand.",
+        "Separate ranking problems from grounding, selection, and click-loss problems.",
+        "Audit target pages for answer extraction, entity clarity, and citation eligibility.",
+        "Compare cited competitors to identify missing attributes, formats, or signals.",
+        "Prioritize fixes by visibility upside, implementation cost, and measurement clarity."
+      ],
+      "deliverables": [
+        "Visibility baseline with gaps",
+        "Diagnosis of ranking vs selection vs click-loss failure",
+        "Prioritized fix list",
+        "Measurement plan"
+      ],
+      "output_sections": ["Baseline", "Diagnosis", "Priority Fixes", "Measurement"],
+      "handoffs": [
+        "Coral: run the SERP and on-page eligibility audit.",
+        "DEJAN layer: inspect grounding, selection rate, and retrieval behavior.",
+        "Current: connect mentions, demand generation, and reporting impact."
+      ],
+      "escalation_rules": [
+        "Escalate if the scope spans multiple products or business units.",
+        "Escalate if there is no baseline data for clicks, citations, or branded demand."
+      ]
+    },
+    {
+      "id": "content_brief",
+      "name": "Content Brief",
+      "description": "Turn a topic or keyword target into a clear brief with angle, structure, evidence, and output goals.",
+      "roles": ["coral", "pinchy", "plankton", "kelp"],
+      "intents": ["content_writing", "fact_check"],
+      "keywords": ["content brief", "brief", "outline", "target keyword", "audience", "angle"],
+      "primary_skill": "seo",
+      "supporting_skills": ["writer", "researcher"],
+      "memory_focus": ["brief_to_draft", "hooks_and_structure", "keyword_grouping", "research", "sources", "outline"],
+      "checklist": [
+        "Define the search intent, audience, and outcome before outlining.",
+        "Set the angle, must-cover points, and proof requirements.",
+        "Map the structure so the writer knows what each section must do.",
+        "Call out supporting sources, examples, and internal links up front.",
+        "State the output goal clearly: ranking, conversion, citation, or distribution support."
+      ],
+      "deliverables": [
+        "Clear article angle",
+        "Section-by-section outline",
+        "Evidence and source requirements",
+        "Success criteria"
+      ],
+      "output_sections": ["Query and Intent", "Angle", "Outline", "Evidence", "Success Criteria"],
+      "handoffs": [
+        "Coral: define the query, SERP intent, and non-negotiable SEO requirements.",
+        "Kelp: provide missing research, evidence, or source support.",
+        "Plankton: draft against the brief without inventing a new angle."
+      ],
+      "escalation_rules": [
+        "Escalate if the brief spans multiple intents that need separate assets.",
+        "Escalate if no trustworthy source base exists for the claims."
+      ]
+    },
+    {
+      "id": "article_draft",
+      "name": "Article Draft",
+      "description": "Turn a brief or rough idea into a structured draft with a strong hook, clear flow, and useful payoff.",
+      "roles": ["plankton", "pinchy", "coral"],
+      "intents": ["content_writing"],
+      "keywords": ["blog post", "article draft", "draft", "hook", "rewrite", "rough draft"],
+      "primary_skill": "writer",
+      "supporting_skills": ["seo", "marketing"],
+      "memory_focus": ["brief_to_draft", "hooks_and_structure", "landing_page_copy", "email_sequences", "writing"],
+      "checklist": [
+        "Convert the brief or idea into a working outline before drafting paragraphs.",
+        "Open with the strongest useful claim rather than throat-clearing.",
+        "Write section by section so each block resolves a clear reader need.",
+        "Revise for clarity, compression, and stronger transitions.",
+        "Check the draft against the brief, hook quality, and downstream promotion needs."
+      ],
+      "deliverables": [
+        "Working outline",
+        "First full draft",
+        "Revision notes",
+        "Promotion-ready hooks"
+      ],
+      "output_sections": ["Hook", "Draft", "Revision Notes", "Promotion Hooks"],
+      "handoffs": [
+        "Plankton: own the draft and revision quality.",
+        "Coral: verify search intent fit and on-page coverage.",
+        "Current: flag hook or angle lines worth promoting after publication."
+      ],
+      "escalation_rules": [
+        "Escalate if the brief is missing audience, angle, or desired outcome.",
+        "Escalate if the source base cannot support the draft's main claims."
+      ]
+    },
+    {
+      "id": "social_repurpose",
+      "name": "Social Repurpose",
+      "description": "Repurpose an article or core message into platform-native social outputs and follow-up angles.",
+      "roles": ["charles", "current", "plankton"],
+      "intents": ["social_creator", "content_writing"],
+      "keywords": ["repurpose", "linkedin", "x", "social posts", "creator-style", "thread"],
+      "primary_skill": "charles",
+      "supporting_skills": ["marketing", "writer"],
+      "memory_focus": ["platform_native_posts", "distribution_system", "marketing_metrics", "hooks_and_structure", "social_media"],
+      "checklist": [
+        "Identify the strongest hook, conflict, or useful claim in the source asset.",
+        "Rewrite the message for each platform instead of cross-posting identical copy.",
+        "Prepare alternate hook angles for follow-up posts if the first version stalls.",
+        "Connect the repurposed posts back to the source asset or desired CTA.",
+        "Track which format, hook, and angle earned the strongest response."
+      ],
+      "deliverables": [
+        "Platform-native post set",
+        "Follow-up hook variants",
+        "CTA mapping",
+        "Format performance notes"
+      ],
+      "output_sections": ["LinkedIn", "X", "Follow-up Angles", "CTA Map"],
+      "handoffs": [
+        "Charles: own platform-native phrasing and engagement hooks.",
+        "Current: coordinate distribution timing and measurement.",
+        "Plankton: supply stronger lines if the source asset lacks hooks."
+      ],
+      "escalation_rules": [
+        "Escalate if the source asset has no clear hook or point of view.",
+        "Escalate if the CTA or destination is unclear."
+      ]
+    },
+    {
+      "id": "launch_coordination",
+      "name": "Launch Coordination",
+      "description": "Coordinate writer, SEO, marketing, and operations around a launch so handoffs are clean and visible.",
+      "roles": ["pinchy", "urchin", "current"],
+      "intents": ["coordination"],
+      "keywords": ["launch", "coordinate", "handoffs", "owners", "rollout", "cross-functional"],
+      "primary_skill": "orchestrator-pinchy",
+      "supporting_skills": ["marketing", "writer", "seo", "operations"],
+      "memory_focus": ["launch_followup", "marketing_handoffs", "writer_handoffs", "coordination", "handoff", "operations"],
+      "checklist": [
+        "Define the launch objective, deliverables, owners, and due dates.",
+        "Sequence the work so briefs, drafts, reviews, promotion, and reporting do not collide.",
+        "Make each handoff explicit with entry criteria and exit criteria.",
+        "Track blockers, missed dependencies, and owner changes in one place.",
+        "Run a short post-launch review to capture what shipped, what slipped, and what to repeat."
+      ],
+      "deliverables": [
+        "Launch owner map",
+        "Sequenced rollout checklist",
+        "Blocker log",
+        "Post-launch review"
+      ],
+      "output_sections": ["Objective", "Owners", "Timeline", "Handoffs", "Review"],
+      "handoffs": [
+        "Pinchy: own the routing, sequencing, and blocker decisions.",
+        "Urchin: maintain owner/status tracking and red-yellow-green visibility.",
+        "Current, Coral, and Plankton: execute within the agreed handoff sequence."
+      ],
+      "escalation_rules": [
+        "Escalate if key owners, deadlines, or deliverables are still ambiguous.",
+        "Escalate if one blocker stalls multiple specialists."
+      ]
+    },
+    {
+      "id": "support_triage",
+      "name": "Support Triage",
+      "description": "Handle first response, severity assessment, and escalation flow for customer issues.",
+      "roles": ["anemone", "pinchy", "urchin"],
+      "intents": ["support_triage"],
+      "keywords": ["support", "triage", "severity", "escalate", "customer issue", "billing issue"],
+      "primary_skill": "support-anemone",
+      "supporting_skills": ["support", "operations", "developer", "finance"],
+      "memory_focus": ["support", "triage", "severity", "escalation", "response_templates", "billing", "bug_report"],
+      "checklist": [
+        "Capture the issue, customer context, and current severity.",
+        "Send a fast first reply that sets expectation without overpromising.",
+        "Classify the issue into answer directly, queue, or immediate escalation.",
+        "Route engineering, billing, or operations follow-up to the correct owner.",
+        "Close the loop with the customer and log the pattern for future reuse."
+      ],
+      "deliverables": [
+        "Severity classification",
+        "First-response draft",
+        "Escalation handoff",
+        "Resolution log"
+      ],
+      "output_sections": ["Issue Summary", "Severity", "First Reply", "Escalation", "Follow-up"],
+      "handoffs": [
+        "Anemone: own the customer-facing response and severity call.",
+        "Developer: take bug reports with reproduction steps.",
+        "Finance: handle billing or invoice correction work."
+      ],
+      "escalation_rules": [
+        "Escalate immediately for P0/P1 issues or when customer impact is unclear.",
+        "Escalate if refunds, billing policy exceptions, or legal risk appear."
+      ]
+    },
+    {
+      "id": "fact_check_brief",
+      "name": "Fact-Check Brief",
+      "description": "Turn a set of claims into a sourced internal brief with confidence markers and open questions.",
+      "roles": ["kelp", "pinchy", "plankton"],
+      "intents": ["fact_check"],
+      "keywords": ["fact-check", "verify", "sources", "evidence", "internal brief", "landscape"],
+      "primary_skill": "researcher",
+      "supporting_skills": ["writer", "seo"],
+      "memory_focus": ["research", "sources", "evidence", "brief", "verification", "source_selection"],
+      "checklist": [
+        "Break the request into discrete claims or questions before searching.",
+        "Collect primary or strongest-available sources and note confidence by claim.",
+        "Separate confirmed facts, plausible inferences, and unknowns.",
+        "Compress the evidence into a short internal brief with citations.",
+        "Call out the highest-risk assumptions or missing data explicitly."
+      ],
+      "deliverables": [
+        "Claim-by-claim evidence table",
+        "Sourced internal brief",
+        "Confidence markers",
+        "Open questions"
+      ],
+      "output_sections": ["Claims", "Evidence", "Confidence", "Open Questions"],
+      "handoffs": [
+        "Kelp: own research quality, sourcing, and confidence scoring.",
+        "Plankton: turn verified material into readable internal language if needed.",
+        "Coral: review for search-market implications when the topic is SEO-related."
+      ],
+      "escalation_rules": [
+        "Escalate if no credible source base exists for a key claim.",
+        "Escalate if the brief mixes facts with business decisions that need approval."
+      ]
+    },
+    {
+      "id": "code_review",
+      "name": "Code Review",
+      "description": "Run a reviewer-first pass for correctness, security, performance, and maintainability risks.",
+      "roles": ["barnacle", "chitin", "reef"],
+      "intents": ["implementation_review"],
+      "keywords": ["code review", "reviewer-level", "patch", "security regressions", "maintainability", "correctness"],
+      "primary_skill": "reviewer",
+      "supporting_skills": ["developer", "qa"],
+      "memory_focus": ["review", "correctness", "security", "performance", "maintainability", "patch"],
+      "checklist": [
+        "Confirm the intended behavior and compare it to the actual implementation.",
+        "Look for correctness, security, performance, and maintainability risks in that order.",
+        "Check whether tests cover new logic and important edge cases.",
+        "Turn findings into specific, actionable review comments.",
+        "Issue a clear approve or request-changes verdict."
+      ],
+      "deliverables": [
+        "Findings list",
+        "Risk summary",
+        "Test gap notes",
+        "Verdict"
+      ],
+      "output_sections": ["Findings", "Risks", "Test Gaps", "Verdict"],
+      "handoffs": [
+        "Barnacle: own the review and final verdict.",
+        "Chitin: address implementation and test gaps raised by review.",
+        "Reef: validate fixes before release if the patch is significant."
+      ],
+      "escalation_rules": [
+        "Escalate immediately for security issues, data loss risks, or unclear requirements.",
+        "Escalate if the code change is too large to review confidently in one pass."
+      ]
+    },
+    {
+      "id": "regression_gate",
+      "name": "Regression Gate",
+      "description": "Build a release-focused QA gate with regression scope, edge cases, and a clear pass/fail verdict.",
+      "roles": ["reef", "barnacle", "tide"],
+      "intents": ["implementation_review"],
+      "keywords": ["regression", "pass fail", "qa", "release gate", "before deployment", "test plan"],
+      "primary_skill": "qa",
+      "supporting_skills": ["reviewer", "developer", "devops"],
+      "memory_focus": ["regression", "pass", "fail", "testing", "deployment", "release"],
+      "checklist": [
+        "Define the changed surface area and the highest-risk regression zones.",
+        "List happy-path, edge-case, and failure-mode checks explicitly.",
+        "Run or specify the tests needed before deployment.",
+        "Record any blockers, missing environments, or unclear specs.",
+        "Issue a PASS, FAIL, or BLOCKED verdict with reasons."
+      ],
+      "deliverables": [
+        "Regression scope",
+        "Test checklist",
+        "Observed issues or blockers",
+        "PASS/FAIL/BLOCKED verdict"
+      ],
+      "output_sections": ["Scope", "Checks", "Blockers", "Verdict"],
+      "handoffs": [
+        "Reef: own the test scope, execution, and verdict.",
+        "Barnacle: confirm review issues are addressed before QA closes.",
+        "Tide: only proceed with deployment after a clear PASS."
+      ],
+      "escalation_rules": [
+        "Escalate if test environment gaps prevent a real verdict.",
+        "Escalate if the spec is unclear enough to invalidate the gate."
+      ]
+    },
+    {
+      "id": "incident_response",
+      "name": "Incident Response",
+      "description": "Coordinate rollback-first production incident handling with clear ownership and post-incident follow-up.",
+      "roles": ["tide", "pinchy", "urchin"],
+      "intents": ["implementation_review", "coordination"],
+      "keywords": ["incident", "rollback", "production", "failed release", "ci cd", "deploy"],
+      "primary_skill": "devops",
+      "supporting_skills": ["multi-agent-reef", "operations", "qa"],
+      "memory_focus": ["incident", "rollback", "production", "ci_cd", "deployment", "safety"],
+      "checklist": [
+        "Assess severity fast and decide whether rollback should happen immediately.",
+        "Stabilize the system before root-cause analysis.",
+        "Assign owners for rollback, verification, communication, and follow-up.",
+        "Document the incident timeline, impact, and decision points.",
+        "Close with a post-incident review and concrete prevention actions."
+      ],
+      "deliverables": [
+        "Severity and rollback decision",
+        "Incident timeline",
+        "Owner map",
+        "Post-incident action list"
+      ],
+      "output_sections": ["Severity", "Immediate Actions", "Owners", "Timeline", "Prevention"],
+      "handoffs": [
+        "Tide: own rollback, deploy safety, and system stabilization.",
+        "Pinchy and Urchin: manage owner clarity, communication, and follow-up.",
+        "Reef: verify the post-fix state before reopening normal deployment flow."
+      ],
+      "escalation_rules": [
+        "Escalate immediately for data loss, security impact, or unclear blast radius.",
+        "Escalate if rollback cannot be executed safely with current information."
+      ]
+    }
+  ]
+}
