@@ -4,20 +4,31 @@
 
 # SEO Vector Snapshot
 
-Portable AI-search and technical SEO retrieval for Codex, Claude Code, OpenClaw, and shell-capable agents.
+Portable SEO memory graph for AI search, technical SEO, and multi-agent workflows.
 
-This repository packages the live retrieval layer behind my local SEO squad into a portable SQLite snapshot plus CLI. The goal is simple: move the working memory graph to another laptop without rebuilding the whole system from zero.
+This is not a backup of notes.
 
-## Why This Exists
+It is the working retrieval layer behind my local SEO squad: a portable SQLite snapshot, learned routing priors, task-pack logic, and CLI + MCP access for Codex, Claude Code, OpenClaw, and shell-capable agents.
 
-Most SEO research gets trapped in tabs, docs, and half-remembered notes.
+If your SEO workflow touches AI Overviews, grounding, AI Mode, technical audits, or reverse engineering, this repo gives you the part of the system that remembers.
 
-This repo turns that problem into a portable retrieval layer:
+## Why This Repo Feels Different
 
-- a local `SQLite` vector-style memory snapshot
-- a query tool that works outside my home directory
-- task-pack routing for specialist SEO workflows
-- a clean handoff point for another machine or another operator
+Most SEO research dies in tabs, loose docs, and half-recalled “I saw this somewhere” moments.
+
+This repo turns that mess into a portable memory layer:
+
+- not a raw vector dump, but a retrieval system with query tooling and task packs
+- not generic SEO text, but practitioner-shaped memory built from live research and curation
+- not locked to one runtime, but usable through CLI, Claude skills, and native MCP tools
+- not another restart-from-zero setup, but a handoff-ready memory graph for the next laptop or operator
+
+## What Makes It Valuable
+
+- preserves working SEO context instead of forcing fresh research every session
+- moves a trained retrieval layer between machines in minutes
+- exposes the same memory through multiple access layers: `CLI`, `MCP`, `Claude skills`, and `task packs`
+- pairs with [`seo-skills-pack`](https://github.com/vijaychauhanseo/seo-skills-pack) so retrieval becomes decisions, not just search hits
 
 ## Platform Support
 
@@ -61,9 +72,9 @@ This repo turns that problem into a portable retrieval layer:
 ## What You Can Use It For
 
 - recover prior research on AI search, grounding, citations, and AI Overviews
-- route a prompt toward the right SEO skill or memory pack
-- move a working retrieval graph to a second laptop
-- pair the DB with the companion [`seo-skills-pack`](https://github.com/vijaychauhanseo/seo-skills-pack)
+- route a prompt toward the right SEO skill, practitioner, or memory pack
+- move a working retrieval graph to a second laptop without rebuilding from scratch
+- pair the DB with the companion [`seo-skills-pack`](https://github.com/vijaychauhanseo/seo-skills-pack) for interpretation and execution
 
 ## Quick Start
 
@@ -179,6 +190,14 @@ python3 tools/squad_memory.py decide "Need a practitioner for core update plus A
 - AI-search analysts who want portable memory, not fresh tab chaos
 - operators moving a working Codex, Claude, or OpenClaw setup between laptops
 - founders building internal retrieval before full productization
+
+## Why It Is Public
+
+Most public SEO repos share templates, prompt fragments, or scripts.
+
+This one shares a working memory layer.
+
+The point is to show what happens when SEO research is treated like infrastructure: stored, routed, queried, and made portable across tools instead of disappearing after the session ends.
 
 ## Portability Notes
 
