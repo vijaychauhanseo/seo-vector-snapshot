@@ -29,6 +29,7 @@ This repo turns that mess into a portable memory layer:
 - moves a trained retrieval layer between machines in minutes
 - exposes the same memory through multiple access layers: `CLI`, `MCP`, `Claude skills`, and `task packs`
 - pairs with [`seo-skills-pack`](https://github.com/vijaychauhanseo/seo-skills-pack) so retrieval becomes decisions, not just search hits
+- now reflects a tiered corpus with a strict live source layer plus slower archive backfill, so the graph can grow without turning freshness into noise
 
 ## Platform Support
 
@@ -44,11 +45,11 @@ This repo turns that mess into a portable memory layer:
 | Metric | Value |
 | --- | ---: |
 | Captured | `2026-03-20` |
-| Chunks | `2349` |
-| Learned path priors | `345` |
-| Learned skill priors | `106` |
+| Chunks | `2978` |
+| Learned path priors | `409` |
+| Learned skill priors | `110` |
 | Learned pack priors | `21` |
-| Role bundles | `190` |
+| Role bundles | `207` |
 
 <p align="center">
   <img src="assets/query-flow.svg" alt="How the SEO vector snapshot works" width="100%" />
@@ -75,6 +76,13 @@ This repo turns that mess into a portable memory layer:
 - route a prompt toward the right SEO skill, practitioner, or memory pack
 - move a working retrieval graph to a second laptop without rebuilding from scratch
 - pair the DB with the companion [`seo-skills-pack`](https://github.com/vijaychauhanseo/seo-skills-pack) for interpretation and execution
+
+## What Changed In This Refresh
+
+- refreshed the DB snapshot to the current live corpus size
+- aligned the snapshot with the stricter reputable-source freshness layer
+- captured the newer archive-backfill growth from secondary reputable sources
+- kept the portable toolchain intact so the repo still works off-machine
 
 ## Quick Start
 

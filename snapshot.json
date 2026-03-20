@@ -2,13 +2,14 @@
   "name": "seo-vector-snapshot",
   "captured_on": "2026-03-20",
   "db_file": "db/squad_memory.db",
-  "chunk_count": 2349,
-  "learned_path_priors": 345,
-  "learned_skill_priors": 106,
+  "chunk_count": 2978,
+  "learned_path_priors": 409,
+  "learned_skill_priors": 110,
   "learned_pack_priors": 21,
-  "role_bundles": 190,
+  "role_bundles": 207,
   "notes": [
     "Portable copy of squad_memory.py uses repo-local or env-provided paths.",
+    "Snapshot now reflects the stricter live-source layer plus archive-backfill growth from the companion seo-skills-pack repo.",
     "Use with the sibling seo-skills-pack repo for best decide/pinchy behavior."
   ]
 }
