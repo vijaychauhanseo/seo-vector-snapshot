@@ -4,7 +4,7 @@
 
 # SEO Vector Snapshot
 
-Portable AI-search and technical SEO retrieval in a single repo.
+Portable AI-search and technical SEO retrieval for Codex, Claude Code, OpenClaw, and shell-capable agents.
 
 This repository packages the live retrieval layer behind my local SEO squad into a portable SQLite snapshot plus CLI. The goal is simple: move the working memory graph to another laptop without rebuilding the whole system from zero.
 
@@ -18,6 +18,15 @@ This repo turns that problem into a portable retrieval layer:
 - a query tool that works outside my home directory
 - task-pack routing for specialist SEO workflows
 - a clean handoff point for another machine or another operator
+
+## Platform Support
+
+| Platform | Status | How To Use |
+| --- | --- | --- |
+| Codex | Ready | direct CLI + companion skills repo |
+| Claude Code / Claude CLI | Ready | installer adds user memory and query skills |
+| OpenClaw | Ready through mirrored import/indexing | use imported files or sync |
+| Other shell-capable agents | Ready | run the bundled Python CLI directly |
 
 ## Snapshot At A Glance
 
@@ -44,6 +53,8 @@ This repo turns that problem into a portable retrieval layer:
   - task-pack metadata used by the CLI
 - `scripts/install_snapshot.sh`
   - one-command installer for another laptop
+- `scripts/install_to_claude.sh`
+  - installs Claude-ready query skills and user memory
 - `snapshot.json`
   - export metadata for this snapshot
 
@@ -80,6 +91,27 @@ Override the target:
 ./scripts/install_snapshot.sh /path/to/portable-memory
 ```
 
+## Quick Start For Claude Code Or Claude CLI
+
+Install the Claude adapter:
+
+```bash
+./scripts/install_to_claude.sh
+```
+
+This creates:
+
+- a user memory import in `~/.claude/CLAUDE.md`
+- `/seo-vector-query`
+- `/seo-skill-router`
+
+After install, you can ask Claude to run:
+
+```text
+/seo-vector-query grounding snippets and selection rate
+/seo-skill-router diagnose an AI Mode citation loss investigation
+```
+
 ## Pair It With The Skills Pack
 
 If the companion skills repo is not installed into `~/.codex/skills`, point the CLI at the cloned skills directory:
@@ -103,7 +135,7 @@ python3 tools/squad_memory.py decide "Need a practitioner for core update plus A
 
 - technical SEOs building local research systems
 - AI-search analysts who want portable memory, not fresh tab chaos
-- operators moving a working Codex or OpenClaw setup between laptops
+- operators moving a working Codex, Claude, or OpenClaw setup between laptops
 - founders building internal retrieval before full productization
 
 ## Portability Notes
@@ -111,6 +143,7 @@ python3 tools/squad_memory.py decide "Need a practitioner for core update plus A
 - the bundled `tools/squad_memory.py` has been patched to avoid a hardcoded `/Users/vijaychauhan` dependency
 - the DB snapshot is portable and can be queried in place
 - no secrets are stored in this repository
+- the CLI can be called by any agent that can run local shell commands
 
 ## Companion Repository
 
@@ -126,6 +159,12 @@ Use the skills repo for interpretation, routing, and operator context.
 If you want a custom GitHub social preview card for this repo, use:
 
 - `assets/social-preview.png`
+
+## Claude Adapter Files
+
+Claude-specific files live under:
+
+- `adapters/claude-code/`
 
 ## License
 
