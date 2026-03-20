@@ -112,6 +112,48 @@ After install, you can ask Claude to run:
 /seo-skill-router diagnose an AI Mode citation loss investigation
 ```
 
+## Use As A Native MCP Server
+
+This repo now ships with a portable stdio MCP server:
+
+- `mcp/seo_memory_mcp_server.py`
+
+It exposes these MCP tools:
+
+- `seo_memory_query`
+- `seo_skill_route`
+- `seo_task_pack`
+- `seo_execution_plan`
+- `seo_snapshot_info`
+
+### Add To Claude Code
+
+If you have the Claude CLI installed:
+
+```bash
+./scripts/install_mcp_for_claude.sh
+```
+
+Or add it manually:
+
+```bash
+claude mcp add seo-memory --scope user -- \
+  python3 /absolute/path/to/seo-vector-snapshot/mcp/seo_memory_mcp_server.py \
+    --db /absolute/path/to/seo-vector-snapshot/db/squad_memory.db \
+    --skills-root /absolute/path/to/skills-root \
+    --task-packs /absolute/path/to/seo-vector-snapshot/tools/task_packs.json
+```
+
+Manual config example:
+
+- `mcp/claude.mcp.json.example`
+
+### Why MCP Matters
+
+The CLI already works for shell-capable agents.
+
+The MCP server makes the same retrieval layer available to clients that prefer native tool calling over local shell commands. That includes Claude Code and other MCP-aware agent runtimes.
+
 ## Pair It With The Skills Pack
 
 If the companion skills repo is not installed into `~/.codex/skills`, point the CLI at the cloned skills directory:
@@ -165,6 +207,7 @@ If you want a custom GitHub social preview card for this repo, use:
 Claude-specific files live under:
 
 - `adapters/claude-code/`
+- `mcp/`
 
 ## License
 

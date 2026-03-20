@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "seo-memory": {
+      "command": "python3",
+      "args": [
+        "/ABSOLUTE/PATH/TO/seo-vector-snapshot/mcp/seo_memory_mcp_server.py",
+        "--db",
+        "/ABSOLUTE/PATH/TO/seo-vector-snapshot/db/squad_memory.db",
+        "--skills-root",
+        "/ABSOLUTE/PATH/TO/skills-root",
+        "--task-packs",
+        "/ABSOLUTE/PATH/TO/seo-vector-snapshot/tools/task_packs.json"
+      ]
+    }
+  }
+}
