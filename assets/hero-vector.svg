@@ -1,0 +1,73 @@
+<svg width="1200" height="640" viewBox="0 0 1200 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="1140" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="320" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#13243A"/>
+      <stop offset="1" stop-color="#0B1220"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#34D399"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#020617" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="640" rx="28" fill="url(#bg)"/>
+  <circle cx="1050" cy="110" r="170" fill="#22C55E" opacity="0.08"/>
+  <circle cx="950" cy="510" r="180" fill="#38BDF8" opacity="0.08"/>
+
+  <rect x="58" y="56" width="132" height="36" rx="18" fill="#0B1220" stroke="#34D399" stroke-opacity="0.45"/>
+  <text x="82" y="79" fill="#CFFAFE" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">PORTABLE DB</text>
+
+  <text x="58" y="162" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800">SEO Vector Snapshot</text>
+  <text x="58" y="210" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="22">Move the retrieval brain, not just the files.</text>
+  <text x="58" y="244" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="22">AI search memory, routing, and query tools in one portable export.</text>
+
+  <rect x="58" y="302" width="240" height="128" rx="22" fill="url(#card)" stroke="#34D399" stroke-opacity="0.25" filter="url(#shadow)"/>
+  <text x="84" y="338" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="18">Chunks</text>
+  <text x="84" y="398" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="800">2349</text>
+
+  <rect x="320" y="302" width="240" height="128" rx="22" fill="url(#card)" stroke="#38BDF8" stroke-opacity="0.25" filter="url(#shadow)"/>
+  <text x="346" y="338" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="18">Skill Priors</text>
+  <text x="346" y="398" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="800">106</text>
+
+  <rect x="58" y="454" width="240" height="116" rx="22" fill="url(#card)" stroke="#F59E0B" stroke-opacity="0.25" filter="url(#shadow)"/>
+  <text x="84" y="490" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="18">Path Priors</text>
+  <text x="84" y="544" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="800">345</text>
+
+  <rect x="320" y="454" width="240" height="116" rx="22" fill="url(#card)" stroke="#A78BFA" stroke-opacity="0.25" filter="url(#shadow)"/>
+  <text x="346" y="490" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="18">Role Bundles</text>
+  <text x="346" y="544" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="800">190</text>
+
+  <rect x="675" y="120" width="428" height="404" rx="28" fill="#0B1220" stroke="#243244" filter="url(#shadow)"/>
+  <text x="710" y="168" fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Retrieval Topology</text>
+
+  <circle cx="772" cy="252" r="44" fill="#052E2B" stroke="#34D399"/>
+  <text x="734" y="258" fill="#D1FAE5" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">DEJAN</text>
+
+  <circle cx="975" cy="252" r="44" fill="#082F49" stroke="#38BDF8"/>
+  <text x="946" y="258" fill="#E0F2FE" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">AIO</text>
+
+  <circle cx="772" cy="418" r="44" fill="#422006" stroke="#F59E0B"/>
+  <text x="744" y="424" fill="#FEF3C7" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">GSC</text>
+
+  <circle cx="975" cy="418" r="44" fill="#1E1B4B" stroke="#A78BFA"/>
+  <text x="935" y="424" fill="#EDE9FE" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">Agents</text>
+
+  <rect x="828" y="306" width="90" height="56" rx="18" fill="url(#accent)"/>
+  <text x="844" y="340" fill="#03131F" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800">DB</text>
+
+  <path d="M812 252H851" stroke="#34D399" stroke-width="3"/>
+  <path d="M918 252H931" stroke="#38BDF8" stroke-width="3"/>
+  <path d="M812 418H851" stroke="#F59E0B" stroke-width="3"/>
+  <path d="M918 418H931" stroke="#A78BFA" stroke-width="3"/>
+  <path d="M873 306V274" stroke="#E2E8F0" stroke-width="3"/>
+  <path d="M873 362V394" stroke="#E2E8F0" stroke-width="3"/>
+
+  <text x="709" y="556" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="18">SQLite snapshot + CLI routing for portable SEO intelligence</text>
+</svg>
