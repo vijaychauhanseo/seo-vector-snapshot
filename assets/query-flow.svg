@@ -1,32 +1,33 @@
 <svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="1200" height="420" rx="24" fill="#F8FAFC"/>
   <rect x="36" y="34" width="1128" height="352" rx="22" fill="#FFFFFF" stroke="#E2E8F0"/>
-  <text x="64" y="82" fill="#0F172A" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800">How the snapshot works</text>
-  <text x="64" y="114" fill="#64748B" font-family="Arial, Helvetica, sans-serif" font-size="18">Curated SEO memory becomes a portable retrieval layer you can move and query anywhere.</text>
+  <text x="64" y="82" fill="#0F172A" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800">Cross-agent retrieval flow</text>
+  <text x="64" y="114" fill="#64748B" font-family="Arial, Helvetica, sans-serif" font-size="18">The same SEO memory graph can now be accessed through shell commands, Claude skills, or native MCP tools.</text>
 
   <rect x="64" y="158" width="220" height="164" rx="22" fill="#ECFDF5" stroke="#A7F3D0"/>
   <text x="90" y="197" fill="#065F46" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">1. Sources</text>
   <text x="90" y="232" fill="#065F46" font-family="Arial, Helvetica, sans-serif" font-size="18">DEJAN</text>
   <text x="90" y="258" fill="#065F46" font-family="Arial, Helvetica, sans-serif" font-size="18">Google docs</text>
-  <text x="90" y="284" fill="#065F46" font-family="Arial, Helvetica, sans-serif" font-size="18">Practitioner notes</text>
+  <text x="90" y="284" fill="#065F46" font-family="Arial, Helvetica, sans-serif" font-size="18">Practitioner canon</text>
 
   <rect x="342" y="158" width="240" height="164" rx="22" fill="#EFF6FF" stroke="#BFDBFE"/>
   <text x="368" y="197" fill="#1D4ED8" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">2. Memory Layer</text>
   <text x="368" y="232" fill="#1E3A8A" font-family="Arial, Helvetica, sans-serif" font-size="18">curated markdown</text>
   <text x="368" y="258" fill="#1E3A8A" font-family="Arial, Helvetica, sans-serif" font-size="18">router notes</text>
-  <text x="368" y="284" fill="#1E3A8A" font-family="Arial, Helvetica, sans-serif" font-size="18">skill priors</text>
+  <text x="368" y="284" fill="#1E3A8A" font-family="Arial, Helvetica, sans-serif" font-size="18">task-pack priors</text>
 
   <rect x="642" y="158" width="228" height="164" rx="22" fill="#F8FAFC" stroke="#CBD5E1"/>
-  <text x="668" y="197" fill="#0F172A" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">3. Snapshot DB</text>
+  <text x="668" y="197" fill="#0F172A" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">3. Snapshot Core</text>
   <text x="668" y="232" fill="#334155" font-family="Arial, Helvetica, sans-serif" font-size="18">`squad_memory.db`</text>
   <text x="668" y="258" fill="#334155" font-family="Arial, Helvetica, sans-serif" font-size="18">portable export</text>
-  <text x="668" y="284" fill="#334155" font-family="Arial, Helvetica, sans-serif" font-size="18">ready to query</text>
+  <text x="668" y="284" fill="#334155" font-family="Arial, Helvetica, sans-serif" font-size="18">MCP + CLI ready</text>
 
-  <rect x="928" y="158" width="196" height="164" rx="22" fill="#FFF7ED" stroke="#FDBA74"/>
-  <text x="954" y="197" fill="#9A3412" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">4. Output</text>
-  <text x="954" y="232" fill="#9A3412" font-family="Arial, Helvetica, sans-serif" font-size="18">query results</text>
-  <text x="954" y="258" fill="#9A3412" font-family="Arial, Helvetica, sans-serif" font-size="18">skill routing</text>
-  <text x="954" y="284" fill="#9A3412" font-family="Arial, Helvetica, sans-serif" font-size="18">next-step decisions</text>
+  <rect x="928" y="146" width="196" height="176" rx="22" fill="#FFF7ED" stroke="#FDBA74"/>
+  <text x="952" y="185" fill="#9A3412" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">4. Access</text>
+  <text x="952" y="222" fill="#9A3412" font-family="Arial, Helvetica, sans-serif" font-size="18">CLI</text>
+  <text x="952" y="248" fill="#9A3412" font-family="Arial, Helvetica, sans-serif" font-size="18">Claude Skills</text>
+  <text x="952" y="274" fill="#9A3412" font-family="Arial, Helvetica, sans-serif" font-size="18">MCP Tools</text>
+  <text x="952" y="300" fill="#9A3412" font-family="Arial, Helvetica, sans-serif" font-size="18">Skill Routing</text>
 
   <path d="M290 240H330" stroke="#34D399" stroke-width="4" stroke-linecap="round"/>
   <path d="M588 240H630" stroke="#60A5FA" stroke-width="4" stroke-linecap="round"/>
