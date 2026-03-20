@@ -12,6 +12,15 @@ It is the working retrieval layer behind my local SEO squad: a portable SQLite s
 
 If your SEO workflow touches AI Overviews, grounding, AI Mode, technical audits, or reverse engineering, this repo gives you the part of the system that remembers.
 
+## Current Refresh
+
+This snapshot now reflects the newer corpus shape behind the squad:
+
+- the DB has been rebuilt against the stricter reputable-source freshness layer
+- archive backfill from secondary reputable sources is now represented in the corpus without polluting the main live monitor
+- snapshot metadata has been updated to the current graph size and prior counts
+- the portable CLI remains intact, so the repo still works off-machine
+
 ## Why This Repo Feels Different
 
 Most SEO research dies in tabs, loose docs, and half-recalled “I saw this somewhere” moments.
@@ -83,6 +92,29 @@ This repo turns that mess into a portable memory layer:
 - aligned the snapshot with the stricter reputable-source freshness layer
 - captured the newer archive-backfill growth from secondary reputable sources
 - kept the portable toolchain intact so the repo still works off-machine
+
+## Current Corpus Shape
+
+Strict live freshness sources:
+
+- Google Search Central
+- Ahrefs
+- DEJAN
+- GSQi
+- Marie Haynes
+- Lily Ray
+- MobileMoxie
+- Brodie Clark
+- iPullRank
+- Jono Alderson
+
+Archive backfill sources represented through the companion memory layer:
+
+- Hobo
+- Aleyda Solis
+- Search Engine Land
+- Search Engine Journal
+- Search Engine Roundtable
 
 ## Quick Start
 
