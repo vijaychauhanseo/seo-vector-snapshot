@@ -120,3 +120,13 @@ The instruction and memory layer that pairs with this DB lives here:
 
 Use this repo for retrieval.
 Use the skills repo for interpretation, routing, and operator context.
+
+## Social Preview Asset
+
+If you want a custom GitHub social preview card for this repo, use:
+
+- `assets/social-preview.png`
+
+## License
+
+MIT. See [`LICENSE`](LICENSE).
